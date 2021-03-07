@@ -1,0 +1,23 @@
+[package]
+name = "i3-auto-layout"
+description = "Automatic, optimal tiling for i3wm"
+version = "0.2.0"
+authors = ["Gregory <gregory.mkv@gmail.com>"]
+edition = "2018"
+homepage = "https://github.com/chmln/i3-auto-layout"
+repository = "https://github.com/chmln/i3-auto-layout"
+readme = "README.md"
+license = "MIT"
+
+[dependencies]
+tokio-i3ipc = "0.8.0"
+tokio = { version = "0.2.21", default-features = false, features = ["rt-threaded", "macros", "sync", "stream"] }
+anyhow = "1.0.30"
+log = "0.4.8"
+flexi_logger = { version = "0.15.2", default-features = false }
+
+[profile.release]
+lto = true
+opt-level = 3
+debug = false
+debug-assertions = false
