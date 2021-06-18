@@ -25,3 +25,6 @@ Then somewhere in your i3 config
 ```
 exec_always --no-startup-id i3-auto-layout
 ```
+
+warning: be sure to add `/home/lonn/.cargo/bin` to your PATH to be able to run the installed binaries
+
